@@ -3,17 +3,19 @@ var app = express();
 var bodyParser = require("body-parser");
 var path = require("path");
 
-// Routes
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "www/index.html"));
-  });
+var PORT = 3000;
 
-app.get("/reservation", function(req, res){
-    res.sendfile(path.join(__dirname, "www/reservation.html"));
+// Routes
+app.get("/", function (req, res) {
+    res.sendFile(path.join(__dirname, "../www/index.html"));
 });
 
-app.get("/tables", function(req, res){
-    res.sendfile(path.join(__dirname, "www/tables.html"));
+app.get("/reservation", function (req, res) {
+    res.sendfile(path.join(__dirname, "../www/reservation.html"));
+});
+
+app.get("/tables", function (req, res) {
+    res.sendfile(path.join(__dirname, "../www/tables.html"));
 });
 
 // port listener
@@ -22,17 +24,17 @@ app.listen(PORT, function () {
 });
 
 // show all tables
-app.get("/api/tables", function(req, res) {
+app.get("/api/tables", function (req, res) {
     return res.json(tables);
-  });
+});
 
 
 var tables = [
     {
-      name: "",
-      phone: "",
-      email: "",
-      uniqueId: "",
+        name: "",
+        phone: "",
+        email: "",
+        uniqueId: "",
     },
 ];
 
