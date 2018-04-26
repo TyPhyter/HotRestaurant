@@ -33,7 +33,42 @@ app.get("/api/tables", function (req, res) {
 // Tables array
 var tables = [
     {
-        name: "",
+        name: "Test 1",
+        phone: "",
+        email: "",
+        uniqueId: "",
+    },
+
+    {
+        name: "Test 2",
+        phone: "",
+        email: "",
+        uniqueId: "",
+    },
+
+    {
+        name: "Test 3",
+        phone: "",
+        email: "",
+        uniqueId: "",
+    },
+
+    {
+        name: "Test 4",
+        phone: "",
+        email: "",
+        uniqueId: "",
+    },
+
+    {
+        name: "Test 5",
+        phone: "",
+        email: "",
+        uniqueId: "",
+    },
+
+    {
+        name: "Test 6",
         phone: "",
         email: "",
         uniqueId: "",

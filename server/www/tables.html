@@ -16,6 +16,29 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        .jumboHead {
+            border-bottom: 1px solid black;
+        }
+
+        .card {
+            text-align: left;
+            font-size: 20px;
+        }
+
+        .card-content {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .reservation-card {
+            padding: 20px 10px;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -45,15 +68,8 @@
             <div class="card-header">
                 Current Reservations
             </div>
-            <div class="card-body">
-                <div class="card reservation-card">
-                    <div class="container">
-                        <span>
-                            <i class="ion-ios-location mr-3"></i>
-                        </span>
-                        <span>This is a reservation</span>
-                    </div>
-                </div>
+            <div class="card-body" id="card-target">
+
             </div>
         </div>
 
@@ -61,15 +77,15 @@
             <div class="card-header">
                 Waiting List
             </div>
-            <div class="card-body">
-                <div class="card reservation-card">
+            <div class="card-body" id="wait-target">
+                <!-- <div class="card reservation-card">
                     <div class="container">
                         <span>
                             <i class="ion-ios-location mr-3"></i>
                         </span>
                         <span>This is a wait list item</span>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -82,9 +98,30 @@
 
     <script>
         $(document).ready(function () {
+            var tableCount = 0;
             $.get('/api/tables')
                 .then(function (data) {
-                    console.log(data);
+                    data.forEach(function (table) {
+                        tableCount++;
+                        var newCard = $('<div></div>');
+                        newCard.html(`
+                            <div class="card reservation-card mb-3">
+                                <div class="container">
+                                    <span>
+                                        <i class="ion-ios-location mr-3"></i>
+                                    </span>
+                                    <span>${table.name}</span>
+                                </div>
+                            </div>
+                        `);
+                        if (tableCount <= 5) {
+                            $('#card-target').append(newCard);
+                        }
+                        else {
+                            $('#wait-target').append(newCard);
+                        }
+
+                    });
                 });
         });
     </script>
