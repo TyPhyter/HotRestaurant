@@ -14,3 +14,7 @@
 .reservation-card {
     padding: 20px 10px;
 }
+
+a:hover {
+    text-decoration: none;
+}
