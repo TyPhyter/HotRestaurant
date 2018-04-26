@@ -1,0 +1,11 @@
+.jumboHead {
+    border-bottom: 1px solid black;
+}
+
+.card {
+    text-align: left;
+}
+
+.reservation-card {
+    padding: 20px 10px;
+}
