@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
@@ -30,34 +31,47 @@
                 HotRestaurant
                 <i class="ion-ios-flame"></i>
             </h1>
-            <button class="btn">View Tables</button>
-            <button class="btn">Make A Reservation</button>
+            <a href="./tables.html">
+                <button class="btn">View Tables</button>
+            </a>
+            <a href="./home.html">
+                <button class="btn"><i class="ion-home"></i></button>
+            </a>
         </div>
-
-        <div class="card card-default mb-4">
-            <div class="card-header">
-                Current Reservations
-            </div>
-            <div class="card-body">
-                <div class="card reservation-card">
-                    <div class="container">
-                        <span>
-                            <i class="ion-ios-location"></i>
-                        </span>
-                        <span>This is a reservation</span>
-                    </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="container">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="inputName">Name</label>
+                                <input type="name" class="form-control" id="inputName" placeholder="Name">
+                            </div>
+                            <!-- <div class="form-group col-md-6">
+                                <label for="inputPassword4">Password</label>
+                                <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                              </div> -->
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPhone">Phone Number</label>
+                            <input type="text" class="form-control" id="inputPhone" placeholder="555 555-5555">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail">Email</label>
+                            <input type="text" class="form-control" id="inputEmail" placeholder="example@info.com">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="inputID">Unique ID</label>
+                                <input type="text" class="form-control" id="inputID">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                    </form>
                 </div>
             </div>
         </div>
 
-        <div class="card card-default mb-4">
-            <div class="card-header">
-                Waiting List
-            </div>
-            <div class="card-body">
-                Body
-            </div>
-        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>

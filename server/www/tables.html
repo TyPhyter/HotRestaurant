@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
@@ -30,8 +31,12 @@
                 HotRestaurant
                 <i class="ion-ios-flame"></i>
             </h1>
-            <button class="btn">View Tables</button>
-            <button class="btn">Make A Reservation</button>
+            <a href="./reserve.html">
+                <button class="btn">Make A Reservation</button>
+            </a>
+            <a href="./home.html">
+                <button class="btn"><i class="ion-home"></i></button>
+            </a>
         </div>
 
         <div class="card card-default mb-4">
@@ -42,7 +47,7 @@
                 <div class="card reservation-card">
                     <div class="container">
                         <span>
-                            <i class="ion-ios-location"></i>
+                            <i class="ion-ios-location mr-3"></i>
                         </span>
                         <span>This is a reservation</span>
                     </div>
@@ -55,7 +60,14 @@
                 Waiting List
             </div>
             <div class="card-body">
-                Body
+                    <div class="card reservation-card">
+                            <div class="container">
+                                <span>
+                                    <i class="ion-ios-location mr-3"></i>
+                                </span>
+                                <span>This is a wait list item</span>
+                            </div>
+                        </div>
             </div>
         </div>
     </div>
